@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>iframes</title>
+    <style>
+        div.sidebar {
+            border: 1px;
+            border-color: black;
+            border-style: solid;
+            margin: -1px;
+            height: 100%;
+        }
+
+        div.clear {
+            clear: both;
+            overflow: hidden
+        }
+
+        #left {
+            float: left;
+            width: 50%;
+            height: 300px;
+        }
+
+        #right {
+            float: right;
+            width: 50%;
+            height: 300px;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            margin: 3px;
+            border-style: none;
+        }
+    </style>
+</head>
+<body>
+<div class="sidebar" id="left">
+    <iframe src="frame0.html"></iframe>
+</div>
+<div class="sidebar" id="right">
+    <iframe src="frame0.html"></iframe>
+</div>
+<div class="sidebar" id="left">
+    <iframe src="frame0.html"></iframe>
+</div>
+<div class="sidebar" id="right">
+    <iframe src="frame0.html"></iframe>
+</div>
+<div class="sidebar" id="left">
+    <iframe src="frame0.html"></iframe>
+</div>
+<div class="sidebar" id="right">
+    <iframe src="frame0.html"></iframe>
+</div><div class="sidebar" id="left">
+    <iframe src="frame0.html"></iframe>
+</div>
+<div class="sidebar" id="right">
+    <iframe src="frame0.html"></iframe>
+</div>
+</body>
+</html>

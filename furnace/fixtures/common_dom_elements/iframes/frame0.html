@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!-- © Copyright 1994-2019 Micro Focus or one of its affiliates -->
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Title</title>
+</head>
+<body>
+    <h1>iframe 0</h1>
+    <button id="btnOK">OK</button>
+    <span id="resultOK"></span>
+    <br><br>
+
+    <button id="btnCancel">Cancel</button>
+    <span id="resultCancel"></span>
+    <br><br>
+
+    <input>
+    <script type="text/javascript">
+        //document.domain = "localhost";
+        console.log("frame0.href :", window.location.href);
+
+        function update(element, button, count) {
+            element.innerHTML = `Click ${button} button: ${count}`;
+        }
+
+        let countOK = 0, countCancel=0;
+        let btnOK = document.getElementById("btnOK");
+        let resultOK = document.getElementById("resultOK");
+        btnOK.addEventListener("click", () => {
+            update(resultOK, "OK", ++countOK);
+        });
+        let btnCancel = document.getElementById("btnCancel");
+        let resultCancel = document.getElementById("resultCancel");
+        btnCancel.addEventListener("click", () => {
+            update(resultCancel, "Cancel", ++countCancel);
+        });
+    </script>
+</body>
+</html>

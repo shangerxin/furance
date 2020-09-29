@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+
+</head>
+<body>
+    <h1>Furnace</h1>
+    <h3>An website for testing web testing tools</h3>
+    {% if  fixture_entries %}
+    <h5>
+        Supported test fixtures:
+    </h5>
+    <ul>
+        {% for entry in fixture_entries %}
+            {% if entry.is_found_index %}
+                <li><a href="{{ entry.index_path }}">{{ entry.parent_folder_name }}</a></li>
+            {% else %}
+                <p>{{ entry.parent_folder_name }}:</p>
+                <ul>
+                    {% for page in entry.other_pages %}
+                    <li><a href="{{ page.relative_path }}">{{ page.name }}</a></li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endfor %}
+    </ul>
+    {% endif %}
+</body>
+</html>
